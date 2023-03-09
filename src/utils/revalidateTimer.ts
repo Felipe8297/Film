@@ -1,4 +1,4 @@
-export const timerToRevalidate = () => {
+export const revalidateTimer = () => {
   const seconds = 60
   const minutes = 60
   const hours = 24

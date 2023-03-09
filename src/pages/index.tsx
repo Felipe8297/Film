@@ -2,7 +2,7 @@ import { ListCards } from '@/components/ListCards'
 import { Loader } from '@/components/PageLoader'
 import { Movie } from '@/contexts/Context'
 import { api } from '@/lib/axios'
-import { timerToRevalidate } from '@/utils/timerToRevalidate'
+import { revalidateTimer } from '@/utils/revalidateTimer'
 import { GetStaticProps } from 'next'
 
 interface HomeProps {
@@ -33,6 +33,6 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       products: movies,
     },
-    revalidate: timerToRevalidate(),
+    revalidate: revalidateTimer(),
   }
 }

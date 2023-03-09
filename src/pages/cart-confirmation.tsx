@@ -5,7 +5,7 @@ import { ConfirmCartContainer } from '@/styles/pages/confirmCart'
 import { useCart } from '@/contexts/Context'
 import Link from 'next/link'
 import { GetStaticProps } from 'next'
-import { timerToRevalidate } from '@/utils/timerToRevalidate'
+import { revalidateTimer } from '@/utils/revalidateTimer'
 import { useEffect } from 'react'
 import { Loader } from '@/components/PageLoader'
 
@@ -70,6 +70,6 @@ export const getStaticProps: GetStaticProps = () => {
     props: {
       options,
     },
-    revalidate: timerToRevalidate(),
+    revalidate: revalidateTimer(),
   }
 }
